@@ -26,3 +26,12 @@
 2. You can move the bug in any direction, to any square, as long as the square is on the grid. If you attempt to move the bug to a square that does not exist on the grid, an error occurs and the bug does not move. 
 3. To change the color of all 3 I used the setColor() method.
 4. If you move a rock on to a bug, and then move the rock again, the bug has been replaced by the rock so there is only 1 actor remaining. The rock replaced the bug at that specific location and in doing so, removed the actor.
+
+# Part 2
+
+#### Set 2 Answers:
+1. The side length instance variable determines the amount of spaces the bug will move forward before turning. 
+2. The steps variable keeps track of how many times the bug has moved, and compares that to the size of the square that the bug must create.
+3. Because in the turn() method, the bug only turns 45 degrees, and the angle of each square corner is 90 degrees.
+4. Because the BoxBug class is an extention of bug, which has that method.
+5. 
