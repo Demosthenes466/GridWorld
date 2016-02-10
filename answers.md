@@ -71,4 +71,11 @@
 1. The comparison of if(gr == null) return false keeps the bug from moving outside of the grid. If the grid is null, the actor will not move.
 2. The return statement return (neightbor == instanceOfRock) which checks whether the neighbor is a rock.
 3. canMove must use the isValid method from Grid in order to determine whether adjacent squares are null or not.
-4. 
+4. The canMove method uses the method uses the getAdjacentLocation method to find the next location to check.
+5. the accessor methods like getGrid and getLocation are inherited and utilized.
+6. The move method will return false due to the canMove method. If that method returns true somehow, then the bug will move off the screen.
+7. It could be avoided by using getLocation over and over again, but that would be way too redundant and sloppy.
+8. Because the flower color is inherited from the actor.
+9. It should, the bug places flowers in spaces where the bug was and is no longer.
+10. 
+
