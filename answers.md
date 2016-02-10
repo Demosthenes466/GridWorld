@@ -34,4 +34,41 @@
 2. The steps variable keeps track of how many times the bug has moved, and compares that to the size of the square that the bug must create.
 3. Because in the turn() method, the bug only turns 45 degrees, and the angle of each square corner is 90 degrees.
 4. Because the BoxBug class is an extention of bug, which has that method.
-5. 
+5. No, the box size will not always be the same. This is because BoxBug requires a length argument when it is called, which means that each instance of a BoxBug will potentially have a different size.
+6. No, the path a BoxBug takes can never change. This is defined in a method in the BoxBug class which cannot change.
+7. The steps will be zero when the length passed to that instance of BoxBug is 0, because steps starts as zero and will only increase for as long as length is greater than 0.
+
+
+#### Exercises:
+1. When the circlebug reaches the end of its established path, rather than turning 90 degrees it will rotate 45 degrees.
+2. Check the file.
+3. Check File
+4. Check File
+5. To add another actor you simply create the object BoxBug name = new BoxBug(length) and then you add it to the world with world.add(new Location (x, y), nameofbug)
+
+# **Part 3:**
+#### Set 3 Answers:
+1. You would use the command public int firstRow = loc1.getRow() and it will return the row.
+2. b will equal false because loc1 and loc2 have different values for their row and columns
+3. loc3 will have (4,4);
+4. 135
+5. It knows based upon the parameter it is passed, since that parameter is a direction.
+
+#### Set 4 Answers:
+1. You can make a for loop which starts on the second row and uses the method Arraylist<E> getNeighbors(Location loc), then continuing that on every third line to use the fewest amount of checks. In order to ensure everything is checked, you must make it check the second to last line in every grid. In a bounded grid, you can use the method ArrayList<Location> getEmpty AdjeacentLocations(Location loc) and use the same pattern. 
+2. use the method isValid(10,10), and the boolean returned will tell you
+3. We cannot see the code for Grid because it is an interface, basically a list of methods for the classes to draw from. The implementations of these are found in the BoundedGrid and UnboundedGrid classes which use the interface.
+4. I think it would be better to use an ArrayList rather than an Array because an Array is a set length list, and since we dont know how many objects we will find, an ArrayList with a variable length makes more sense. 
+
+#### Set 5 Answers:
+1. Each actor has a color, direction, and location
+2. Its default direction is north, and its default color is red.
+3. Actor is a class instead of an interface because we not only use methods from Actor, we make variations of Actor.
+4. An actor cannot put itself into a grid twice without removing itself because each actor only has one location. Same iwth removing itself twice. And yes, the actor can remove itself and put itself back in. 
+5. An actor can turn 90 degrees with two calls of the turn() method.
+
+#### Set 6 Answers:
+1. The comparison of if(gr == null) return false keeps the bug from moving outside of the grid. If the grid is null, the actor will not move.
+2. The return statement return (neightbor == instanceOfRock) which checks whether the neighbor is a rock.
+3. canMove must use the isValid method from Grid in order to determine whether adjacent squares are null or not.
+4. 
