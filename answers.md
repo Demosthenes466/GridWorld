@@ -77,5 +77,6 @@
 7. It could be avoided by using getLocation over and over again, but that would be way too redundant and sloppy.
 8. Because the flower color is inherited from the actor.
 9. It should, the bug places flowers in spaces where the bug was and is no longer.
-10. 
+10. The flower.putSelfInGrid(gr, loc) places the flower onto the grid.
+11. It must call it four times
 
