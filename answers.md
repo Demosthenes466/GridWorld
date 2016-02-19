@@ -102,4 +102,6 @@
 2. A CrabCritter will, after moving, test to see if there is an actor in the three spaces in front of it. If there is, it will check what type of actor it is, and if its not a rock or another critter, then it will remove that actor from the grid.
 3. To get not only the direction in which it intends to move, but to find the locations in the directions 45 degrees to the left or right of the forward square such that it can test if those locations contian an edible item.
 4. The possible locations would be (4,3), (4,4), and (4,5). 
-5. Both the crab and the critter move one space at a time in a certain direction. The only real difference is that the crab will remove objects in a range in front of it, and the critter 
+5. Crabs only move side to side and up and down, whereas the critters can move diagonally as well as in the cardinal directions. However, they both do move one space at a time.
+6. If the crab cannot move, it turns.
+7. Because it inherits the method processActors from critter, which states that it will not remove an instance of itself from the grid.
