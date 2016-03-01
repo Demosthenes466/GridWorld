@@ -10,9 +10,9 @@ import info.gridworld.grid.Location;
 public class BlusterCritter extends Critter {
 	public int courage;
 	
-	public BlusterCritter(int c) {
+	public BlusterCritter(int courage) {
 		setColor(Color.GRAY);
-		courage = c;
+		this.courage = courage;
 	}
 	
 	public ArrayList<Actor> getActors() {
@@ -24,7 +24,7 @@ public class BlusterCritter extends Critter {
 		for (int j = -2; j < 3; j ++) {
 			for (int k = -2; k < 3; k ++) {
 				Location temp = new Location(row + k, col + j);
-				if(getGrid().isValid(temp) && temp != loc && getGrid().get(temp) != null) {
+				if(getGrid().get(temp) != null && getGrid().isValid(temp) && temp != loc) {
 					extendedNeighbors.add(getGrid().get(temp));
 				}
 			}
@@ -38,12 +38,8 @@ public class BlusterCritter extends Critter {
 		if (size < courage) {
 			setColor(getColor().brighter());
 			return;
-		} else if (size > courage) {
-			setColor(getColor().darker());
-				return;
-		} else {
-			return;
 		}
+		setColor(getColor().darker());
+		return;
 	}
-	
 }
